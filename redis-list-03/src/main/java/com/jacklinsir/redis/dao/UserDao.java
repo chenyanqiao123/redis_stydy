@@ -17,12 +17,12 @@ public interface UserDao {
     @Results({
             @Result(id = true, property = "id", column = "id"),
             @Result(property = "username", column = "username"),
-            @Result(property = "password", column = "passwotd"),
+            @Result(property = "password", column = "password"),
             @Result(property = "phone", column = "phone"),
             @Result(property = "email", column = "email"),
             @Result(property = "isActive", column = "is_active"),
             @Result(property = "createTime", column = "create_time"),
-            @Result(property = "updateTime", column = "updateTime")
+            @Result(property = "updateTime", column = "update_time")
     })
     @Select("select id,username,password,phone,email,is_active,create_time,update_time from user")
     List<User> listAllUser();

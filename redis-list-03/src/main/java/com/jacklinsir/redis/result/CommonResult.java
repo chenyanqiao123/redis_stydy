@@ -42,6 +42,6 @@ public class CommonResult<T> {
      * @return
      */
     public static <T> CommonResult<T> filed() {
-        return new CommonResult<>(ResultCode.FIELD.getCode(), ResultCode.FIELD.getMessage(), null);
+        return new CommonResult<>(ResultCode.FAILURE.getCode(), ResultCode.FAILURE.getMessage(), null);
     }
 }

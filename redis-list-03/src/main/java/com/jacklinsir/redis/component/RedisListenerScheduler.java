@@ -4,22 +4,17 @@ import com.jacklinsir.redis.common.Constant;
 import com.jacklinsir.redis.dto.MailDto;
 import com.jacklinsir.redis.model.Notice;
 import com.jacklinsir.redis.model.User;
-import com.jacklinsir.redis.service.INoticeService;
 import com.jacklinsir.redis.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ObjectUtils;
 
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * 定时扫描管理员添加的公告发送给商户
